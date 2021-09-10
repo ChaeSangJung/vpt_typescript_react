@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 
 type MyFormProps = {
-    onSubmit: (form: { name: string; description: string }) => void;
+    onSubmit: (form: { e_name: string; description: string }) => void;
 };
 const MyForm = ({ onSubmit } : MyFormProps) => {
     const [form, setForm] = useState({
-        name: "",
+        e_name: "",
         description : ""
     })
 
-    const {name, description} = form;
+    const {e_name, description} = form;
 
     const handleSubmit = (e : React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         onSubmit(form);
         setForm({
-            name: '',
+            e_name: '',
             description: ''
         }); // 초기화
     }
@@ -24,12 +24,15 @@ const MyForm = ({ onSubmit } : MyFormProps) => {
         setForm({
             ...form,
             [name]: value
+            // e_name or description
+            // e_name : value
+            // description : value
         })
     }
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <input name="name" value={name} onChange={onChange} />
+                <input name="e_name" value={e_name} onChange={onChange} />
                 <input name="description" value={description} onChange={onChange} />
                 <button type="submit">등록</button>
             </form>

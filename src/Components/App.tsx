@@ -7,7 +7,7 @@ const App: React.FC = () => {
   const onClickGreeting = (name:string) => {
     console.log(`${name} says hello`);
   }
-  const onSubmit = (form: { name: string; description: string }) => {
+  const onSubmit = (form: { e_name: string; description: string }) => {
     console.log(form);
   };
   return (
