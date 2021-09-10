@@ -16,6 +16,7 @@ type GreetingsProps = {
 // )
 const Greeting = ({name, mark, optional, onClickGreeting} : GreetingsProps) => {
     const handleClick = () => onClickGreeting(name);
+    
     return (
         <>
             <div>

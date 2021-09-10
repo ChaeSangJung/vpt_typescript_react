@@ -1,12 +1,21 @@
 import React from "react";
+import Counter from "./Counter";
 import Greeting from "./Greeting";
+import MyForm from "./MyForm";
 
 const App: React.FC = () => {
-  const handleClick = (name:string) => {
-    console.log(`${name} says hello`)
+  const onClickGreeting = (name:string) => {
+    console.log(`${name} says hello`);
   }
+  const onSubmit = (form: { name: string; description: string }) => {
+    console.log(form);
+  };
   return (
-    <Greeting name={"Sydney"} onClickGreeting={handleClick} />
+    <>
+      <Greeting name={"Sydney"} onClickGreeting={onClickGreeting} />
+      <Counter />
+      <MyForm onSubmit={onSubmit}/>
+    </>
   )
 }
 
