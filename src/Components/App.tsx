@@ -4,6 +4,7 @@ import Greeting from "./Greeting";
 import MyForm from "./MyForm";
 import ReCounter from "./ReCounter";
 import ReducerSample from "./ReducerSample";
+import ReduxCounter from "../Route/ReduxCounter"
 
 
 const App: React.FC = () => {
@@ -23,6 +24,7 @@ const App: React.FC = () => {
         <ReCounter />
       </div>
       <ReducerSample />
+      <ReduxCounter />
     </>
   )
 }
